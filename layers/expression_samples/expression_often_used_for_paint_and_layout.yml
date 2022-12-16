@@ -1,0 +1,76 @@
+#zoom with interpolate (gradual change)
+line-opacity:
+- interpolate
+- - linear #you can use exponential (["exponential", 0.5]), and others.
+- - zoom
+- 3 #ZL
+- 0
+- 4 #ZL
+- 1
+
+#zoom with step (sudden change)
+line-opacity:
+- step
+- - zoom 
+- '#FF0000'
+- 2 #ZL
+- '#00FF00'
+- 4 #ZL
+- '#0000FF'
+
+#zoom with step for text-field
+text-field:
+- step
+- - zoom 
+- '' #no label
+- 5 #ZL
+- - get
+  - text_field
+
+#match for color, icon, etc.
+icon-image:
+- match
+- - get
+  - poptyp
+- 1
+- icon_1 # from sprite
+- - 2
+  - 3
+- icon_2
+- icon_others
+
+# combination of step/zoom and match (match should be in step/zoom. step/zoom will not work in match.)
+text-size:
+- step
+- - zoom
+- - match
+  - - get
+    - class
+  - big
+  - 10
+  - 7
+- 6 #ZL
+- - match
+  - - get
+    - class
+  - big
+  - 12
+  - 9
+- 8 #ZL
+- 0 #text size all zero 
+
+
+
+###not recommended in MapLibre and Mapbox  (but used for Esri, Maputnik, etc.)
+line-color: 
+  stops: 
+  - - 1 #ZL
+    - '#000000'
+  - - 5 #ZL
+    - '#FFFFFF'
+line-width: 
+  stops: 
+  - - 1 #ZL
+    - 0.1
+  - - 5 #ZL
+    - 2
