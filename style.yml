@@ -1,0 +1,14 @@
+version: 8
+#sprite: https://-------------/sprites/sprite
+#glyphs: https://-------------/{fontstack}/{range}.pbf
+sources:
+  v: #change the name if needed
+    type: vector
+    #attribtuion: atttribution here   #add if needed
+    #minzoom: 0 #add if needed
+    #maxzoom: 5 #add if needed
+    tiles:
+    - https://--------/{z}/{x}/{y}.pbf
+layers:
+   - !!inc/file layers/background.yml
+   # add any layer if needed
