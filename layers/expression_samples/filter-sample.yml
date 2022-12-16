@@ -1,0 +1,72 @@
+# filter example 0 (if attribution is boolean)
+filter:
+  - get
+  - status  # given this attribution is boolean.
+# filter example 1 (simple logical operator)###
+filter:
+  - '=='
+  - - get
+    - hogehoge 
+  - 1 #use '' for text
+# filter example 2 (simple logical operator)
+filter:
+  - '=='
+  - - get
+    - hogehoge 
+  - - 0  #use '' for text
+    - 1
+# filter example 3 (logical operator, all or any)
+filter:
+  - 'all'  #any will work, too
+  - - '=='
+    - - get
+      - hogehoge
+    - 1
+  - - '!='
+    - - get
+      - hogehoge2
+    - 0
+  - - get
+    - status # given this attribution is boolean.
+# filter example 4 (match)
+filter:
+- match
+- - get
+  - z_order
+- - 1
+  - 2
+  - 3
+  - 4
+- true
+- false
+# filter example 5 (geometry)
+filter:
+- match
+- - geometry-type
+- - Polygon
+  - Multipolygon
+- true
+- false
+# filter example 5 (combination)
+filter:
+- match
+- - geometry-type
+- - Polygon
+  - Multipolygon
+- - match
+  - - get
+    - z_order
+  - - 0
+    - 1
+  - true
+  - false
+- false
+# filter example 6 (in)
+filter:
+- 'in'
+- - get
+  - hogehoge
+- - literal
+  - - 5101
+    - 5103
+

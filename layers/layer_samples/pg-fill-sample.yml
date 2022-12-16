@@ -1,0 +1,12 @@
+#filter:
+id: pg-fill-sample
+#minzoom: 0
+#maxzoom: 5
+paint:
+  fill-color: '#000000'
+  #fill-opacity: 0.5
+  #fill-out-color: '#000000'
+  #fill-pattern: (pattern from sprite)
+source: v
+source-layer: polygonlayer 
+type: fill

@@ -1,0 +1,27 @@
+#filter:
+id: pt-symbol-sample
+#minzoom: 0
+#maxzoom: 5
+layout:
+  #icon-allow-overlap: true
+  icon-image: (icon_from_sprite)
+  icon-size: 1
+  #text-allow-overlap: true
+  #text-optional: true
+  text-field: '{text_field}' #or [get, text_field] would be good.
+  text-font: 
+  - NotoSans-Regular #text font should be from glyphs
+  text-size: 10
+  #text-anchor: bottom
+  #text-offset:
+  # - 1
+  # - 1
+  #text-letter-spacing: 0.1
+  #text-max-width: 50
+paint:
+  text-color: '#000000'
+  #text-halo-color: '#FFFFFF'
+  #text-halo-width: 1
+source: v
+source-layer: pointlayer #polygon or line can be also used for labelling 
+type: symbol

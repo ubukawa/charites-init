@@ -1,0 +1,18 @@
+#filter:
+id: ls-line-sample
+#minzoom: 0
+#maxzoom: 5
+paint:
+  line-color: '#000000'
+  line-width: 1
+  #line-opacity: 0.5
+  #line-dasharray:  #match cannot be used for dasharray in MapLibre
+  #  - 5
+  #  - 4
+  #  - 3
+#layout:
+#  line-cap: round
+#  line-join: round
+source: v
+source-layer: linelayer 
+type: line
